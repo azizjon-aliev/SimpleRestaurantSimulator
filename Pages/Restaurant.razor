@@ -1,0 +1,23 @@
+@page "/restaurant"
+
+<h3>Simple Restaurant Simulator</h3>
+
+<p>
+    <label>Menu Item:</label>
+    <select @bind="_menuItem">
+        <option value="chicken">Chicken</option>
+        <option value="egg">Egg</option>
+    </select>
+</p>
+<p>
+    <label>Quantity:</label>
+    <input type="number" @bind="_quantity" min="1"/>
+</p>
+<p>
+    <button @onclick="SubmitRequest">Submit New Request</button>
+    <button @onclick="CopyRequest">Copy Previous Request</button>
+    <button @onclick="PrepareFood">Prepare Food</button>
+</p>
+
+<h4>Results</h4>
+<p>@_resultMessage</p>
